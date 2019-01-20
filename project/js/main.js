@@ -6,22 +6,34 @@ jQuery(document).ready(function(){
         circular:true,
         scroll:{
             items:1,
-            duration:500,
-            pauseOnHover:true
+            duration:200,
+            pauseOnHover:true,
         },
         auto:true,
         items:
         {
             visible:{
                 min:1,
-                max:1
+                max:1,
             },
+            start:0,
             height:"variable"
         },
         pagination:{
-            container:".slider-pager",
+            container:".carousel-pagination",
             anchorBuilder:false
     }
     }
     )
+    $(window).scroll(function(){
+        var top = $(window).scrollTop();
+        if(top>=60){
+            $("header").addClass("secondary");
+        }
+        else 
+            if($("header").hasClass("secondary")){
+               $("header").removeClass("secondary"); 
+            }
+        
+    });
 });

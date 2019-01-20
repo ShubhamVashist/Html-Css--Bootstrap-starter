@@ -3,11 +3,19 @@
     margin: 0;
     padding: 0;
 }
+body {
+    height:3000px;
+}
 header
 {
-    background-color: deepskyblue;
     height: 112px;
     line-height: 112px;
+    position: fixed;
+    z-index: 1;  /* bring bottom layer to top */
+    width: 100%;
+}
+.secondary {
+    background-color: deepskyblue;
 }
 ul
 {
@@ -24,7 +32,9 @@ header nav
 }
 .logo img 
 {
-     margin-top: 30px; 
+     margin-top: 15px; 
+     height: 80px;
+    
 }
 header nav ul li a
 {
@@ -40,8 +50,7 @@ header nav ul li a:hover
 }
 .img1
 {
-    background-image: url(..//image/slider1.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),url(..//image/images.jpg); 
     background-size: 100% 100%;
 }
 .slider, .slider ul, .slider ul li
@@ -54,8 +63,39 @@ header nav ul li a:hover
 .slider h2
 {
     font-weight: bold;
+    margin-top: 270px;
 }
 .slider span
 {
     color:orange;
+}
+.slider a {
+    padding: 10px 50px;
+    margin-right: 10px;
+}
+.slider a.btn-half {
+    background-color: deepskyblue;
+    color: white;
+}
+.slider a.btn-half:hover {
+    opacity: 0.7;
+    transition: 0.5s ease-in;
+}
+.slider a.btn-full {
+    background-color: orange;
+    color:white;
+}
+.slider a.btn-full:hover {
+    opacity: 0.7;
+    transition: 0.5s ease-in;
+}
+.img2 {
+    background-image: url(../image/image2.jpg);
+    background-size: 100% 100%;
+}
+.slider i {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
